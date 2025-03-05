@@ -1,1 +1,6 @@
- <IfModule mod_rewrite.c>    RewriteEngine On    RewriteRule ^(.*)$ /UIDConvertion/public/$1 [L]</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ /UIDConvertion/public/$1 [L]
+
+</IfModule>
